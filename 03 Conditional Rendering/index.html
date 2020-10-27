@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="nav-bar"></div>
+    <div id="app">
+        <div class="product">
+            <div class="product-image">
+                <img :src="image">
+            </div>
+            <div class="product-info">
+                <h1>{{product}}</h1>
+                <h3 v-if="onSale">On Sale!</h3>
+                <p>{{description}}</p>
+                <a :href="website">Learn More</a>
+                <p v-if="inventory >= 10">In Stock</p>
+                <p v-else-if="inventory > 0">Almost Sold Out</p>
+                <p v-else>Out of Stock</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

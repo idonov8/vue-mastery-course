@@ -1,13 +1,19 @@
 <template>
-    <h1>Create Event</h1>
+  <div>
+    <h1>Create an Event, {{ user.name }}</h1>
+    <p>{{ catLength }}</p>
+  </div>
 </template>
 
 <script>
-export default {
+import { mapState, mapGetters } from 'vuex'
 
+export default {
+  computed: {
+    ...mapState(['user', 'categories']),
+    ...mapGetters(['catLength'])
+  }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -36,6 +36,7 @@ const getPageEvents = (routeTo, next) => {
       routeTo.params.page = currentPage
       next()
     })
+    .catch(() => next({ name: 'network-issue' }))
 }
 export default {
   props: {

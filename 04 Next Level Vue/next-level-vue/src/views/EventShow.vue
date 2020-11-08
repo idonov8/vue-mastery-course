@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="event-header">
-      <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
+      <span class="eyebrow">@{{ event.time }} on {{ event.date | date }}</span>
       <h1 class="title">{{ event.title }}</h1>
       <h5>
         {{ event.organizer ? 'Organized by ' + event.organizer.name : '' }}

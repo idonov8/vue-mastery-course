@@ -7,7 +7,7 @@ export default {
       name: 'todo',
       tasks: [
         {
-          description: '',
+          description: 'First description',
           name: 'first task',
           id: uuid(),
           userAssigned: null
@@ -30,7 +30,7 @@ export default {
       name: 'in-progress',
       tasks: [
         {
-          description: '',
+          description: 'Description in progress',
           name: 'first task',
           id: uuid(),
           userAssigned: null

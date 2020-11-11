@@ -30,7 +30,7 @@
           </p>
          </div>
          <input type="text"
-         class="block p-2 w-full bg-transparent"
+         class="block p-2 w-full bg-transparent outline-none"
          placeholder="+ Enter new task"
          @keyup.enter="createTask($event, column.tasks)">
        </div>

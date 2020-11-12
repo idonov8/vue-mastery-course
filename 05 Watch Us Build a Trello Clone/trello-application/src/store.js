@@ -12,6 +12,12 @@ export default new Vuex.Store({
     board
   },
   mutations: {
+    CREATE_COLUMN (state, { name }) {
+      state.board.columns.push({
+        name,
+        tasks: []
+      })
+    },
     CREATE_TASK (state, { tasks, name }) {
       tasks.push({
         name,

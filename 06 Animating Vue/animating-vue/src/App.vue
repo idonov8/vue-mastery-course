@@ -80,7 +80,20 @@ button {
 }
 
 .slide-fade-leave-to {
-  transform: translateX(-10px);
+  transform: translateY(-10px);
   opacity: 0;
+}
+
+.slide-up-enter {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.slide-up-enter-active {
+  transition: all 0.2s ease;
+}
+
+.slide-up-move {
+  transition: transform 0.8s ease-in-out;
 }
 </style>

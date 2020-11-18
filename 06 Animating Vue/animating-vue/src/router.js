@@ -16,16 +16,31 @@ export default new Router({
     {
       path: '/list',
       name: 'list',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ './views/List.vue')
+      component: () => import(/* webpackChunkName: "list" */ './views/List.vue')
     },
     {
       path: '/drawer',
       name: 'drawer',
-      component: () => import('./views/Drawer.vue')
+      component: () =>
+        import(/* webpackChunkName: "list" */ './views/Drawer.vue')
+    },
+    {
+      path: '/cards',
+      name: 'cards',
+      component: () =>
+        import(/* webpackChunkName: "cards" */ './views/Cards.vue')
+    },
+    {
+      path: '/simple',
+      name: 'simple',
+      component: () =>
+        import(/* webpackChunkName: "simple" */ './views/Simple.vue')
+    },
+    {
+      path: '/stagger',
+      name: 'stagger',
+      component: () =>
+        import(/* webpackChunkName: "stagger" */ './views/Stagger.vue')
     }
   ]
 })

@@ -5,13 +5,22 @@
 </template>
 
 <script>
+// import gsap from 'gsap' -> doesn't work >:(
+import { TweenMax } from 'gsap/TweenMax'
 export default {
   methods: {
     beforeEnter(el) {
-      // starting styles
+      el.style.opacity = 0
+      el.style.trasform = 'scale(0,0)'
     },
     enter(el, done) {
-      // style to transition to once entered
+      TweenMax.to(el, 5, {
+        duration: 1,
+        opacity: 1,
+        scale: 1,
+        ease: 'bounce.out',
+        onComplete: done
+      })
     }
   }
 }

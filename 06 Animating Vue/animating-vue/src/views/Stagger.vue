@@ -6,6 +6,7 @@
 
 <script>
 import { TweenMax } from 'gsap/TweenMax'
+// import gsap from 'gsap' -> doesn't work >:(
 export default {
   data() {
     return {
@@ -20,7 +21,16 @@ export default {
     }
   },
   mounted() {
-    // stagger cards into position
+    TweenMax.staggerFrom(
+      '.card',
+      0.5,
+      {
+        opacity: 0,
+        y: 200,
+        ease: 'power1'
+      },
+      0.1
+    )
   }
 }
 </script>

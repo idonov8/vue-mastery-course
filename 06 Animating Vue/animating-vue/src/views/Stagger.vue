@@ -5,8 +5,7 @@
 </template>
 
 <script>
-import { TweenMax } from 'gsap/TweenMax'
-// import gsap from 'gsap' -> doesn't work >:(
+import gsap from 'gsap'
 export default {
   data() {
     return {
@@ -15,22 +14,23 @@ export default {
         { id: 8748 },
         { id: 4919 },
         { id: 5527 },
-        { id: 9428 },
-        { id: 7103 }
+        { id: 9428 }
+        // { id: 7103 }
       ]
     }
   },
   mounted() {
-    TweenMax.staggerFrom(
-      '.card',
-      0.5,
-      {
-        opacity: 0,
-        y: 200,
-        ease: 'power1'
-      },
-      0.1
-    )
+    gsap.from('.card', {
+      duration: 0.5,
+      opacity: 0,
+      scale: 0,
+      y: 200,
+      ease: 'power1',
+      stagger: {
+        each: 0.1,
+        from: 'center'
+      }
+    })
   }
 }
 </script>

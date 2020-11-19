@@ -5,8 +5,7 @@
 </template>
 
 <script>
-// import gsap from 'gsap' -> doesn't work >:(
-import { TweenMax } from 'gsap/TweenMax'
+import gsap from 'gsap'
 export default {
   methods: {
     beforeEnter(el) {
@@ -14,8 +13,8 @@ export default {
       el.style.trasform = 'scale(0,0)'
     },
     enter(el, done) {
-      TweenMax.to(el, 5, {
-        duration: 1,
+      gsap.to(el, {
+        duration: 2,
         opacity: 1,
         scale: 1,
         ease: 'bounce.out',

@@ -35,7 +35,6 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  line-height: 195;
 }
 #app {
   box-sizing: border-box;

@@ -11,6 +11,18 @@ export default {
   components: {
     NavBar,
   },
+  head() {
+    return {
+      titleTemplate: "%s - Ido's awesome nuxt app",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Here you can find all the coolest events',
+        },
+      ],
+    }
+  },
 }
 </script>
 <style>
@@ -23,7 +35,7 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 195;
 }
 #app {
   box-sizing: border-box;

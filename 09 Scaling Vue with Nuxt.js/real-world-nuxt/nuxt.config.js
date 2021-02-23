@@ -1,3 +1,4 @@
+import EventService from 'services/EventService.js'
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -39,4 +40,14 @@ export default {
 
   // Progress bar color
   loading: { color: '#39b982' },
+
+  generate: {
+    routes: () => {
+      return EventService.getEvents().then((response) => {
+        return response.data.map((event) => {
+          return '/event/' + event.id
+        })
+      })
+    },
+  },
 }
